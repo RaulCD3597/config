@@ -31,6 +31,8 @@ treesitter.setup({
 		"vim",
 		"dockerfile",
 		"gitignore",
+		"go",
+		"dart",
 	},
 	-- auto install above language parsers
 	auto_install = true,

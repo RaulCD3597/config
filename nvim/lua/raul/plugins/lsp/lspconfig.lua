@@ -3,6 +3,8 @@ if not lspconfig_status then
 	return
 end
 
+local util = require("lspconfig/util")
+
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then
 	return
@@ -63,6 +65,22 @@ typescript.setup({
 lspconfig["cssls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+
+lspconfig["gopls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = { "gopls", "serve" },
+	filetypes = { "go", "gomod" },
+	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
 })
 
 -- configure lua server (with special settings)

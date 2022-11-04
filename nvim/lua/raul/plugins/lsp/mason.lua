@@ -23,6 +23,7 @@ mason_lspconfig.setup({
 		"html",
 		"cssls",
 		"sumneko_lua",
+		"gopls",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -34,6 +35,7 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
+		"goimports",
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
