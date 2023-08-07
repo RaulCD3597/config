@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git docker zsh-autosuggestions fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,3 +121,7 @@ export PATH="$PATH:/Users/raul/go/bin"
 
 # brew
 eval $(/opt/homebrew/bin/brew shellenv)
+
+# python config
+alias python='python3'
+alias pip='pip3'
