@@ -125,3 +125,6 @@ eval $(/opt/homebrew/bin/brew shellenv)
 # python config
 alias python='python3'
 alias pip='pip3'
+
+# nvim alias
+alias vim=nvim
