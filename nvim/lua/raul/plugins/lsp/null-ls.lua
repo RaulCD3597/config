@@ -20,9 +20,11 @@ return {
 			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
 			-- setup formatters & linters
 			sources = {
-				null_ls.builtins.formatting.gofumpt,
-				null_ls.builtins.formatting.goimports_reviser,
-				null_ls.builtins.formatting.golines,
+				formatting.gofumpt,
+				formatting.goimports_reviser.with({
+					extra_args = { "-rm-unused", "-set-alias", "-format" },
+				}),
+				formatting.golines,
 				--  to disable file types use
 				--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 				formatting.prettier.with({
