@@ -20,6 +20,10 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
+# completion case insensitive
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
