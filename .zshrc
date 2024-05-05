@@ -43,3 +43,10 @@ export PATH="$PATH:/Users/raul/.dotnet/tools"
 # python config
 alias python='python3'
 alias pip='pip3'
+
+# oh-my-zsh plugins
+ZSH=~/.oh-my-zsh
+ZSH_CUSTOM=$ZSH/custom
+
+# source $ZSH/lib/git.zsh
+source $ZSH/plugins/git/git.plugin.zsh
